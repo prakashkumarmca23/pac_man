@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="box" style="width: 1350px;
+    height:500px;  
+    background-color: beige;
+    border: 2px solid black;
+    position: relative;
+    "></div>
+   
+   
+    <script>
+        pacarr=[["PacMan1.png","PacMan2.png"],["PacMan3.png","PacMan4.png"]];
+        var position = 0;
+        var direction=0;
+        var focus = 0;
+        var velocity=100;
+        var img=document.createElement("img");
+        document.getElementById("box").appendChild(img);
+
+
+        function move(){
+            img.src=pacarr[direction][focus];
+
+            if(direction === 0){
+                position += velocity
+                img.style.left= position+"px"
+            }
+       
+            else{
+                position -= velocity
+                img.style.left= position+"px"
+              
+            }
+                if (position >1100) {
+                direction = 1
+            } 
+            else if (position <= 0) {
+                direction = 0
+            }
+            focus=(focus+1)%2
+
+            img.style.position="absolute"
+            img.style.width="100px"
+            img.style.height="100px"
+            img.style.marginTop="50px"
+            
+        }
+
+         setInterval(move,500) 
+   
+    </script>  
+   
+</body>
+</html>
