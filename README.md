@@ -6,3 +6,6 @@ The PacMan Animation project is a fun and interactive web application created us
 Open the github link to run the PacMan program
 
 or CLICK THIS TO SEE THE RESULT: https://prakashkumarmca23.github.io/pac_man/
+
+## Future Improvements
+This project can be  enchanced by adding more styles and animation to the pacman
